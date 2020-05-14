@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="projetLeModern.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projetLeModern"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Cinéma Le Modern</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Column="0" Name="lvSeance">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding unFilm.libelleFilm}" Width="200"></TextBlock>
+                            <TextBlock Text="{Binding unFilm.unRealisateur.nomRealisateur}" Width="150"></TextBlock>
+                            <TextBlock Text="{Binding unHoraire}" Width="150"></TextBlock>
+                            <TextBlock Text="{Binding uneSalle.nomSalle}" Width="150"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Foreground="Red">Type salle:</TextBlock>
+                <ListView Background="MidnightBlue" Grid.Row="1" Name="lvSalle" SelectionChanged="lvSalle_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding nomSalle}" Width="150"></TextBlock>
+                                <TextBlock Text="{Binding nbPlace}" Width="50"></TextBlock>
+                                <TextBlock Text="{Binding descriptionSalle}" Width="3000"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Grid.Row="2" Background="DarkRed" Name="btnSalleReset" Content="Toutes les salles" Click="btnSalleReset_Click"/>
+
+                <TextBlock Grid.Row="3" Foreground="Red">Genre:</TextBlock>
+                <ListView Background="MidnightBlue" Grid.Row="4" Name="lvGenre" SelectionChanged="lvGenre_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding libelleGenre}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Grid.Row="5" Background="DarkRed" Name="btnGenreReset" Content="Tous les genres" Click="btnGenreReset_Click"/> 
+                
+                <TextBlock Grid.Row="6" Foreground="Red" >Réalisateur:</TextBlock>
+                <ListView Background="MidnightBlue" Grid.Row="7" Name="lvRealisateur" SelectionChanged="lvRealisateur_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding nomRealisateur}" Width="250"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Grid.Row="8" Background="DarkRed" Name="btnRealisateurReset" Content="Tous les réalisateur" Click="btnRealisateurReset_Click"/>
+                <TextBlock Grid.Row="9" Foreground="Red">Jour:</TextBlock>
+                <CalendarDatePicker Background="MidnightBlue" Grid.Row="10" Name="cdpDate" DateChanged="CalendarDatePicker_DateChanged" HorizontalAlignment="Left" VerticalAlignment="Top"></CalendarDatePicker>
+                <Button Background="DarkRed" Grid.Row="11" Name="btnDateReset" Content="Toutes les dates" Click="btnDateReset_Click"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center"  >Entrer un mail:</TextBlock>
+                <TextBox Name="txtNom" Width="240" Height="50" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center"  >Sélectionner un nombre de personnes:</TextBlock>
+                <Slider   Name="sldNbPersonne" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="240" Minimum="1" Maximum="15"></Slider>
+            </StackPanel>
+            <Button  Grid.Column="2" Name="btnReservation" Content="Réserver" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="btnReservation_Click"></Button>
+        </Grid>
+    </Grid>
+</Page>

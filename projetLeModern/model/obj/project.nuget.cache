@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TJq2GoQgO2egoScRAFDhVaHObXI2GZ/sxoC8ZX/hFJOrI3gUca0jcCyLXOjz4YVX8/xgKJq+6M0I/Ji+QOaRJg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\erwan\\OneDrive\\Desktop\\E4\\projetLeModern\\model\\model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\erwan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\erwan\\.nuget\\packages\\system.runtime.windowsruntime\\4.7.0\\system.runtime.windowsruntime.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

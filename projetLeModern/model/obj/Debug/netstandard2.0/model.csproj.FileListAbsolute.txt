@@ -1,0 +1,9 @@
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\bin\Debug\netstandard2.0\model.deps.json
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\bin\Debug\netstandard2.0\model.dll
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\bin\Debug\netstandard2.0\model.pdb
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\obj\Debug\netstandard2.0\model.csprojAssemblyReference.cache
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\obj\Debug\netstandard2.0\model.AssemblyInfoInputs.cache
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\obj\Debug\netstandard2.0\model.AssemblyInfo.cs
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\obj\Debug\netstandard2.0\model.dll
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\obj\Debug\netstandard2.0\model.pdb
+C:\Users\erwan\OneDrive\Desktop\E4\projetLeModern\model\obj\Debug\netstandard2.0\model.csproj.CoreCompileInputs.cache
